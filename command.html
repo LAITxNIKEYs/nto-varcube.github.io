@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html lang="ru" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Сумма технологий</title>
-  <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
-  </head>
+<html>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
   <body>
-    <a-scene arjs embedded>
-      <a-marker type="pattern" url='marker/marker1/pattern-bummarker.patt'>
-        <a-box position='0 0.5 0' ='color: green;'></a-box>
-      </a-marker>
+    <a-scene embedded="" arjs="">
+      <a-assets></a-assets>
+      <a-marker type='pattern' url='markers/marker1/pattern-bummarker.patt'>
+      <a-box position='0 0 0' ='color: red;'></a-box>
+    </a-marker>
+    <a-camera camera=""></a-camera>
     </a-scene>
   </body>
 </html>
