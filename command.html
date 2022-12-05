@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
   <head>
-    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <meta charset="utf-8">
+    <title>Сумма технологий</title>
   </head>
-    <body style="margin : 0px; overflow: hidden;">
-
-        <a-scene arjs embedded>
-          <a-marker type='pattern' url='markers/marker1/pattern-bummarker.patt'>
-            <a-box position='0 0.5 0' ='color: red;'></a-box>
-          </a-marker>
-
-            <a-entity camera></a-entity>
-
-        </a-scene>
-    </body>
+  <body>
+    <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+    <a-scene embedded arjs>
+      <a-marker url="markers/marker1/pattern-bummarker.patt">
+        position="0 0 0"
+        scale="1 1 1"
+        gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"
+      </a-marker>
+    </a-scene>
+  </body>
 </html>
