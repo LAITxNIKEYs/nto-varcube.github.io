@@ -8,9 +8,12 @@
   </head>
   <body>
     <a-scene embedded arjs>
+      <a-assets>
+        <img id="naz" src="com\VARCUBIKS.jpg">
+      </a-assets>
 
       <a-marker preset="custom" type="pattern" url="pat\pattern-a.patt">
-        <a-box color="green" scale="1 1 1"></a-box>
+        <a-plane src="#custom"></a-plane>
       </a-marker>
 
       <a-marker preset="custom" type="pattern" url="pat\pattern-b.patt">
