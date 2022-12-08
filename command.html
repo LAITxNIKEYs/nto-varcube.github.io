@@ -8,30 +8,39 @@
   </head>
   <body>
     <a-scene embedded arjs>
-      <a-assets>
-        <img id="naz"
-        src="https://i.imgur.com/YKLgAEN.jpeg">
-      </a-assets>
 
+      <!-- путь до изображений этого задания: com\Название_файла.Формат(типо: png) -->
+
+      <!-- Верх -->
       <a-marker preset="custom" type="pattern" url="pat\pattern-a.patt">
-        <a-plane src="#custom" position="-90 0 0"></a-plane>
+        <a-plane src="" position="-90 0 0"></a-plane>
       </a-marker>
+
+      <!-- передняя -->
 
       <a-marker preset="custom" type="pattern" url="pat\pattern-b.patt">
         <a-video url="com\Anisimov.MOV" position="-90 0 0"></a-video>
       </a-marker>
 
+      <!-- правая -->
+
       <a-marker preset="custom" type="pattern" url="pat\pattern-c.patt">
         <a-box color="black" scale="1 1 1"></a-box>
       </a-marker>
+
+      <!-- нижняя -->
 
       <a-marker preset="custom" type="pattern" url="pat\letterD.patt">
         <a-box color="red" scale="1 1 1"></a-box>
       </a-marker>
 
+      <!-- задняя -->
+
       <a-marker preset="custom" type="pattern" url="pat\letterF.patt">
         <a-box color="orange" scale="1 1 1"></a-box>
       </a-marker>
+
+      <!-- левая -->
 
       <a-marker preset="custom" type="pattern" url="pat\pattern-g.patt">
         <a-box color="brown" scale="1 1 1"></a-box>
