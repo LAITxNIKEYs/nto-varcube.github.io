@@ -8,9 +8,9 @@
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
     <script>
 AFRAME.registerComponent('vidhandler', {
-  // ...
+
   init: function () {
-    // Set up initial state and variables.
+
     this.toggle = false;
     this.vid = document.querySelector("#vid")
     this.vid.pause();
@@ -31,27 +31,27 @@ if(this.el.object3D.visible == true){
   </script>
 
   <script>
-AFRAME.registerComponent('vidhandler', {
-// ...
-init: function () {
-  // Set up initial state and variables.
-  this.toggle = false;
-  this.nas = document.querySelector("#nas")
-  this.nas.pause();
-},
-tick:function(){
+  AFRAME.registerComponent('vidhandler', {
 
-if(this.el.object3D.visible == true){
-if(!this.toggle){
-   this.toggle = true;
-   this.nas.play();
-  }
-}else{
-this.toggle = false;
-  this.nas.pause();
-  }
-}
-});
+    init: function () {
+
+      this.toggle = false;
+      this.vid = document.querySelector("#nas")
+      this.vid.pause();
+    },
+    tick:function(){
+
+  if(this.el.object3D.visible == true){
+    if(!this.toggle){
+       this.toggle = true;
+       this.vid.play();
+      }
+    }else{
+    this.toggle = false;
+      this.vid.pause();
+      }
+    }
+  });
 </script>
   </head>
   <body>
