@@ -31,6 +31,30 @@ if(this.el.object3D.visible == true){
 
   </script>
 
+  <script>
+  AFRAME.registerComponent('vidhandler', {
+
+init: function () {
+
+  this.toggle = false;
+  this.vide = document.querySelector("#vid")
+  this.vide.pause();
+},
+tick:function(){
+
+if(this.el.object3D.visible == true){
+if(!this.toggle){
+   this.toggle = true;
+   this.vide.play();
+  }
+}else{
+this.toggle = false;
+  this.vide.pause();
+  }
+}
+});
+
+</script>
 
 
   </head>
