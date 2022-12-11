@@ -10,27 +10,30 @@
 
     <script>
 
-    AFRAME.registerComponent('vidHandler', {
-
-  schema: {
-     video: {type: 'selector'},
-  },
-  init: function() {
-
-     this.video = this.data.video
-     this.video.pause()
-  },
-  tick: function() {
-    if (this.el.object3D.visible == true) {
-      if (!this.toggle) {
-        this.toggle = true;
-        this.video.play()
-      }
-     } else {
-      this.toggle = false;
-      this.video.pause()
+    AFRAME.registerComponent('vidhandler', {
+    init: function() {
+        this.toggle = false;
+        this.vidNodes = document.querySelectorAll("#vid, #nas");
+        for (let i = 0; i < this.vidNodes.length; i++) {
+              this.vidNodes[i].pause();
+        }
+    },
+    tick: function() {
+        if (this.el.object3D.visible == true) {
+            if (!this.toggle) {
+                this.toggle = true;
+                for (let i = 0; i < this.vidNodes.length; i++) {
+                  this.vidNodes[i].play();
+                }
+            }
+        } else {
+            this.toggle = false;
+            for (let i = 0; i < this.vidNodes.length; i++) {
+              this.vidNodes[i].pause();
+            }
+        }
     }
-  }
+});
 })
 
   </script>
@@ -57,13 +60,13 @@
 
       <!-- передняя -->
 
-      <a-marker preset="custom" type="pattern" url="pat\pattern-b.patt" vidhandler="video: #vid">
+      <a-marker preset="custom" type="pattern" url="pat\pattern-b.patt" vidhandler>
         <a-video material='src: #vid' rotation="90 180 0"></a-video>
       </a-marker>
 
       <!-- правая -->
 
-      <a-marker preset="custom" type="pattern" url="pat\pattern-c.patt" vidhandler="video: #nas">
+      <a-marker preset="custom" type="pattern" url="pat\pattern-c.patt" vidhandler>
         <a-video src="#nas" rotation="90 180 0"></a-video>
       </a-marker>
 
@@ -75,7 +78,7 @@
 
       <!-- задняя -->
 
-      <a-marker preset="custom" type="pattern" url="pat\letterF.patt" vidhandler="video: #jen">
+      <a-marker preset="custom" type="pattern" url="pat\letterF.patt" vidhandler>
         <a-video src="#jen" rotation="90 180 0"></a-video>
       </a-marker>
 
