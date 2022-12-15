@@ -11,43 +11,30 @@
 
       <a-assets>
 
-        <a-asset-item id="un" src="modelsAR\untitled.glb"></a-asset-item>
+        <a-asset-item id="un" src=""></a-asset-item>
 
-        <a-asset-item id="god" src="modelsAR\2022.glb"></a-asset-item>
+        <a-asset-item id="god" src="ars\zvezd.gltf"></a-asset-item>
 
-        <a-asset-item id="el" src="modelsAR\elka.glb"></a-asset-item>
+        <a-asset-item id="el" src=""></a-asset-item>
 
-        <a-asset-item id="sh" src="modelsAR\shap.glb"></a-asset-item>
+        <a-asset-item id="sh" src=""></a-asset-item>
 
         <a-asset-item id="govik" src="ars\sneg.gltf"></a-asset-item>
 
-        <a-asset-item id="zv" src="modelsAR\zved.glb"></a-asset-item>
+        <a-asset-item id="zv" src=""></a-asset-item>
 
       </a-assets>
 
       <a-marker preset="custom" type="pattern" url="pat\pattern-a.patt">
-        <a-gltf-model src="#god"></a-gltf-model>
+        <a-gltf-model src="#god" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">></a-gltf-model>
       </a-marker>
 
-      <a-marker preset="custom" type="pattern" url="pat\pattern-b.patt">
-        <a-gltf-model src="#el"></a-gltf-model>
-      </a-marker>
-
-      <a-marker preset="custom" type="pattern" url="pat\pattern-c.patt">
-        <a-gltf-model src="#un"></a-gltf-model>
-      </a-marker>
-
-      <a-marker preset="custom" type="pattern" url="pat\letterD.patt">
-        <a-gltf-model src="#sh"></a-gltf-model>
-      </a-marker>
 
       <a-marker preset="custom" type="pattern" url="pat\letterF.patt">
         <a-gltf-model src="#govik"></a-gltf-model>
       </a-marker>
 
-      <a-marker preset="custom" type="pattern" url="pat\pattern-g.patt">
-        <a-gltf-model src="#zv"></a-gltf-model>
-      </a-marker>
+
 
         <a-entity camera></a-entity>
     </a-scene>
